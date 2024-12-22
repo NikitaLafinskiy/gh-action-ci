@@ -1,0 +1,26 @@
+name: Workflow created by ${{ github.actor }}
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+env:
+  GITHUB_ACTIONS: 1
+
+jobs:
+  github-task-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Shows an env variable
+        run: echo ${{ env.GITHUB_ACTIONS }}
+
+      - name: Display the name of the branch and the repository
+        run: |
+          echo ${{ github.ref }}
+          echo ${{ github.repository }}
+
+      - name: Display the event name
+        run: echo ${{ github.event_name }}
