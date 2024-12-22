@@ -1,4 +1,5 @@
-name: Workflow created by ${{ github.actor }}
+name: Test workflow
+run-name: Workflow created by ${{ github.actor }}
 
 on:
   pull_request:
